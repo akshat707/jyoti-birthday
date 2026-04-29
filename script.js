@@ -84,7 +84,9 @@ const videos = [
   "videos/vid3.mp4",
   "videos/vid4.mp4",
   "videos/vid5.mp4",
-  "videos/vid6.mp4"
+  "videos/vid6.mp4",
+  "videos/vid7.mp4",
+  "videos/vid8.mp4
 ];
 
 let current = 0;
