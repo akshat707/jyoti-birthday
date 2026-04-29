@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.glow {
+  font-size: 50px;
+  text-shadow: 0 0 10px #fff, 0 0 20px #ff4e78;
+}
+
+.btn {
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 30px;
+  border: none;
+  background: white;
+  color: #ff4e78;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+/* VIDEO */
+#mainVideo {
+  width: 80%;
+  max-width: 800px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+/* HEARTS */
+.hearts {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  bottom: -20px;
+  animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+
+/* CONFETTI */
+#confetti {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
