@@ -4,11 +4,15 @@
   <meta charset="UTF-8">
   <title>Happy Birthday Jyoti 🎂</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 🔥 Prevent caching issues -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ❤️ Hearts -->
+<!-- ❤️ Floating Hearts -->
 <div class="hearts" id="hearts"></div>
 
 <!-- 🎉 Confetti -->
@@ -18,20 +22,32 @@
 <section class="hero">
   <h1 class="glow">🎉 Happy Birthday Jyoti 🎂</h1>
   <p id="typingText"></p>
-  <button class="btn" onclick="startSurprise()">Open Your Surprise 🎁</button>
+
+  <button class="btn" onclick="startSurprise()">
+    Open Your Surprise 🎁
+  </button>
 </section>
 
 <!-- 🎥 VIDEO PLAYER -->
 <section id="videoSection" class="hidden">
   <h2>💌 Messages From Your Friends</h2>
-  <video id="mainVideo" controls></video>
+
+  <!-- 🔥 IMPORTANT FIXES -->
+  <video 
+    id="mainVideo"
+    controls
+    playsinline
+    preload="auto"
+  ></video>
 </section>
 
 <!-- 🎵 MUSIC -->
-<audio id="bgMusic" loop>
-  <source src="music.mp3" type="audio/mpeg">
+<audio id="bgMusic" loop preload="auto">
+  <source src="./music.mp3" type="audio/mpeg">
 </audio>
 
+<!-- JS -->
 <script src="script.js"></script>
+
 </body>
 </html>
