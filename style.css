@@ -7,65 +7,108 @@ body {
   overflow-x: hidden;
 }
 
-/* HERO */
+/* 🌟 HERO SECTION */
 .hero {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
+/* ✨ Glow Heading */
 .glow {
-  font-size: 50px;
-  text-shadow: 0 0 10px #fff, 0 0 20px #ff4e78;
+  font-size: 55px;
+  text-shadow: 0 0 10px #fff,
+               0 0 20px #ff4e78,
+               0 0 40px #ff4e78;
+  animation: pulse 2s infinite;
 }
 
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* 📝 Typing Text */
+#typingText {
+  font-size: 20px;
+  margin: 15px 0;
+  opacity: 0.9;
+}
+
+/* 🎁 Button */
 .btn {
-  padding: 15px 30px;
+  padding: 15px 35px;
   font-size: 18px;
-  border-radius: 30px;
+  border-radius: 40px;
   border: none;
   background: white;
   color: #ff4e78;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255,255,255,0.6);
+}
+
+/* 🎥 VIDEO SECTION */
 .hidden {
   display: none;
 }
 
-/* VIDEO */
-#mainVideo {
-  width: 80%;
-  max-width: 800px;
-  border-radius: 20px;
-  margin-top: 20px;
+#videoSection {
+  padding: 40px 20px;
 }
 
-/* HEARTS */
+/* 🎬 Main Video Player */
+#mainVideo {
+  width: 85%;
+  max-width: 900px;
+  border-radius: 20px;
+  margin-top: 20px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.4);
+}
+
+/* ❤️ Floating Hearts */
 .hearts {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   pointer-events: none;
+  overflow: hidden;
 }
 
 .heart {
   position: absolute;
   bottom: -20px;
   animation: floatUp linear infinite;
+  opacity: 0.8;
 }
 
+/* 💖 Heart Animation */
 @keyframes floatUp {
-  to {
-    transform: translateY(-100vh);
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.5);
     opacity: 0;
   }
 }
 
-/* CONFETTI */
+/* 🎉 Confetti Canvas */
 #confetti {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  pointer-events: none;
 }
